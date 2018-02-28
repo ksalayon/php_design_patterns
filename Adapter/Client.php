@@ -36,15 +36,13 @@
  * - Nothing in the reference class's code changes
  */
 
-
 namespace Adapter;
+
 include_once('Desktop.php');
 include_once('Mobile.php');
 include_once('MobileAdapter.php');
 
-use Adapter\Desktop as Desktop;
-use Adapter\Mobile as Mobile;
-use Adapter\MobileAdapter as MobileAdapter;
+
 
 class Client
 {

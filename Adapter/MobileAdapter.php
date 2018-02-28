@@ -9,7 +9,6 @@ namespace Adapter;
 include_once("IFormat.php");
 include_once("Mobile.php");
 
-use Adapter\IFormat as IFormat;
 class MobileAdapter implements IFormat
 {
     private $mobile;

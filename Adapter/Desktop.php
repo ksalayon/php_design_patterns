@@ -1,13 +1,12 @@
 <?php
-namespace Adapter;
-require_once 'IFormat.php';
 /**
  * Created by PhpStorm.
  * User: Kin.Salayon
  * Date: 28/02/2018
  * Time: 10:14 AM
  */
-use Adapter\IFormat as IFormat;
+namespace Adapter;
+require_once 'IFormat.php';
 
 class Desktop implements IFormat
 {
