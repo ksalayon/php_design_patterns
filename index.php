@@ -7,6 +7,13 @@
  */
 //require_once 'FactoryPattern.php';
 //require_once 'FactoryOptimized.php';
-require_once 'CarFactoryPattern.php';
+//require_once 'CarFactoryPattern.php';
+require_once 'Adapter/Client.php';
+
+use Adapter\Client as AdapterClient;
+
+$adapterClient = new AdapterClient();
+
+
 
 
