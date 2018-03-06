@@ -4,11 +4,14 @@
 ```
 Summary of Factory Pattern Structure
 abstract class Creator
-    contains the actual implementation of the object creation (e.g create method)
+    contains the implementation of the object creation method (e.g create method)
+        - public function create(ICar $car)
     contains interface method to impose create method (e.g. factoryMethod)
+        - protected abstract function factoryMethod(ICar $car)
 
 class Factory extends Creator
-	contains methods creature method to be used by Creator's create method
+	class used to actually create new objects
+    Provide's Creator class with Creature Class's own create implementation
     e.g. protected function factoryMethod(ICar $car)
             $car->show();
 
@@ -29,8 +32,7 @@ class Client
 
 ## Adapter Pattern
 ```
-Adapter Pattern is used to allow implementations from separate incompatible interfaces
-to work together
+Adapter Pattern is used to allow implementations from separate incompatible interfaces to work together
 Parts:
     * interface IReference - interface used by the reference classes
     * class Reference - concrete class that will be referred to by the adapter
@@ -40,9 +42,9 @@ Parts:
         but initializes with an IAdaptee object. It then wraps the Adaptee methods inside the IReference methods implementations
     * class Client
         creates an instance of the adaptee class
-        then creates an isntance of the adapter with the adaptee instance passed to its constructor
+        then creates an instance of the adapter with the adaptee instance passed to its constructor
 
-        adapter can make  the method calls like in the reference class but with implementation based on the adaptee
+        adapter can make method calls with the same method name as in the reference class but with implementation based on the adaptee
 
         e.g.
 
@@ -67,7 +69,7 @@ Decorator pattern allows you to systematically plug-in new behavior
    It implements all the abstract methods from the IComponent interface
 
  * Decorator Interface e.g abstract IDecorator extends IComponent
-   Extends component interface so that the decorators inhereting this will
+   Extends component interface so that the decorators inheriting this will
    retain reference to the IComponent type
    note: There is no need to create actual implmentations of IComponent into this class
 
